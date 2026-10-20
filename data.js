@@ -13,10 +13,52 @@ window.ACERVO = {
   // o e-mail é montado pelo navegador, para não ficar escrito inteiro no código da página
   contato: { usuario: "jeffs.fernandes", dominio: "gmail.com", assunto: "Acervo Guerreiras" },
 
+  sobreNos: [
+    "O Acervo Guerreiras é o trabalho de um colecionador e pesquisador da história do futebol. Colecionamos desde 2014, e desde o começo a pesquisa pesa tanto quanto a camisa: de que época é, para que torneio foi feita, o que dizem as etiquetas, os números, os nomes e o desgaste, e o que dá para confirmar e o que ainda é hipótese.",
+    "Tudo começou com uma dificuldade: informação sobre o futebol feminino é difícil de encontrar, e sobre as camisas, mais ainda. Cada peça exige procurar, comparar com fotos e registros, perguntar, duvidar e anotar. Para nós, achar a camisa é só o começo; o que interessa é a jornada de cada uma, de onde veio e o que ela viveu.",
+    "Colecionar futebol feminino é também uma forma de valorizá-lo. Guardar as camisas, documentar as histórias e mostrá-las com o cuidado que se dá a qualquer outra memória do esporte é o que este acervo quer fazer."
+  ],
+
   sobre: [
     "Camisas de seleções femininas, todas de jogo, fotografadas na frente e nas costas, com a mesma luz e o mesmo fundo, para que dê para comparar tecidos, estampas e desgaste de uma peça para outra.",
-    "O acervo fica em São Paulo e tem duas coleções: uma que conta as Copas e as Olimpíadas de 1991 a 2004, e a Legends, com camisas de jogadoras que atravessaram essas décadas. A catalogação continua: cada ficha é completada à medida que a história de cada camisa é confirmada."
+    "O acervo fica em São Paulo e tem duas coleções: Pioneiras, que conta as Copas e as Olimpíadas de 1991 a 2004, e Legends, com camisas de jogadoras que atravessaram essas décadas. A catalogação continua: cada ficha é completada à medida que a história de cada camisa é confirmada."
   ],
+
+  ui: {
+    docTitle: "Acervo Guerreiras · A história do futebol feminino, vestida em campo",
+    metaDesc: "Camisas de jogo de seleções femininas, de 1992 a 2024, em duas coleções: Pioneiras e Legends.",
+    selo: "camisas de jogo",
+    sub: "<strong>{n} camisas de jogo</strong> de seleções femininas, de {a} a {b}, em {c} coleções.",
+    colecoesAria: "As duas coleções",
+    trilhoAria: "Linha do tempo: Copas, Olimpíadas e Legends",
+    camisasN: "{n} camisas",
+    copaRot: "Copa", olimpRot: "Olimpíadas",
+    legCopa: "Copa do Mundo", legOlim: "Olimpíadas",
+    legProv: "Tracejado: uso provável, pelo modelo e pela época",
+    legPrep: "Pontilhado: preparada para a competição, sem uso em jogo",
+    legSemNome: "Camisa de jogo sem nome: nas competições as camisas levavam o nome",
+    epocaTit: "Camisas da época",
+    tambem: "Camisas do acervo que podem ter estado em campo aqui:",
+    sobreTit: "Sobre nós", sobreLink: "Sobre nós", voltar: "← Início", acervoTit: "O acervo", contato: "Conversar sobre o acervo",
+    rodape: "{nome}{local} · {n} camisas, {a}–{b}. Escudos e marcas pertencem aos seus titulares e aparecem aqui apenas nas fotos das camisas.",
+    fichaAria: "Ficha da camisa", frente: "Frente", costas: "Costas", ladoAria: "Lado da camisa",
+    fechar: "Fechar ficha", anterior: "Anterior", proxima: "Próxima",
+    rSelecao: "Seleção", rEpoca: "Época", rFab: "Fabricante", rNum: "Número", rNome: "Nome na camisa", rTipo: "Tipo",
+    rAtrib: "Atribuição", rTam: "Tamanho", rEstado: "Estado", rProc: "Procedência", rMarcas: "Marcas", rDet: "Detalhes",
+    competicoes: "Competições", foraComp: "Fora das competições",
+    stConf: "Confirmado.", stProv: "Uso provável, pelo modelo e pela época.", stPrep: "Preparada para esta competição, sem uso em jogo.",
+    rotConf: " (confirmado)", rotProv: " (uso provável)", rotPrep: " (preparada, sem uso em jogo)",
+    abrirFicha: "Abrir ficha: ", foraCompAria: "Camisa de jogo da época, fora das competições",
+    nr: "nº", altFmt: "Camisa {t} de {p} ({y}), número {n}, {l}", ladoF: "frente", ladoB: "costas",
+    selGrupo: "Idioma / Language"
+  },
+
+  usos: {
+    epoca: {
+      rotulo: "Eliminatória / amistoso",
+      texto: "Camisa de jogo sem nome. Nas competições as camisas levavam o nome da jogadora, então estas foram usadas provavelmente em eliminatórias, amistosos de preparação (inclusive na véspera da Copa) e outros jogos da época, e não nas competições."
+    }
+  },
 
   competicoes: {
     "copa-1995": { tipo: "copa",       ano: 1995, nome: "Copa do Mundo 1995" },
@@ -31,8 +73,8 @@ window.ACERVO = {
   colecoes: [
     {
       id: "c1991",
-      titulo: "Coleção 1991–2003",
-      resumo: "Quatro Copas, três Olimpíadas",
+      titulo: "Pioneiras",
+      resumo: "1991–2003 · Quatro Copas, três Olimpíadas",
       texto: "Entre 1991 e 2003, o futebol feminino passou de um torneio que a própria FIFA hesitou em chamar de Copa do Mundo para uma final com mais de 90 mil pessoas no estádio. Foram quatro Copas e três Olimpíadas, e o Brasil esteve em todas elas. As camisas desta coleção vêm desse período, todas de jogo.",
       capitulos: [
         {
@@ -50,7 +92,8 @@ window.ACERVO = {
             "O torneio se chamou oficialmente Campeonato Mundial Feminino da FIFA, e não Copa do Mundo: a entidade ainda hesitava em ceder a marca. Os jogos tinham 80 minutos, em dois tempos de 40.",
             "Os Estados Unidos venceram a Noruega por 2 a 1, com dois gols de Michelle Akers, o segundo a dois minutos do fim. Linda Medalen tinha empatado para a Noruega.",
             "O Brasil estreou em Copas vencendo o Japão por 1 a 0, perdeu para Estados Unidos e Suécia e saiu por um gol: a vaga de melhor terceiro colocado ficou com Taipé Chinesa, que tinha os mesmos pontos e o mesmo saldo e havia marcado dois gols contra um do Brasil."
-          ]
+          ],
+          notaCamisas: "A camisa da Noruega é de algum ponto entre 1990 e 1994, período que inclui esta Copa. Não há registro que a ligue a um torneio específico, nem que confirme se é da seleção feminina ou da masculina."
         },
         {
           id: "copa-1995", tipo: "copa", ano: 1995, titulo: "Copa do Mundo 1995",
@@ -66,8 +109,7 @@ window.ACERVO = {
           paragrafos: [
             "Os jogos passaram a ter 90 minutos e a vitória a valer três pontos. A Noruega fez 17 a 0 em três jogos na primeira fase e, na final, abriu 2 a 0 em três minutos: Hege Riise marcou aos 37 e Marianne Pettersen aos 40, contra uma Alemanha que tinha sido tricampeã europeia meses antes.",
             "O Brasil abriu a Copa vencendo a Suécia por 1 a 0, mas perdeu para o Japão por 2 a 1 e para a Alemanha por 6 a 1, e ficou na primeira fase. Na seleção, uma jogadora de 17 anos fazia sua estreia: Formiga, que ainda jogaria mais seis Copas."
-          ],
-          notaCamisas: "A camisa da Noruega é de c. 1992, da geração que seria campeã em 1995. Ela não está marcada como usada neste torneio."
+          ]
         },
         {
           id: "olim-1996", tipo: "olimpiadas", ano: 1996, titulo: "Olimpíadas 1996",
@@ -83,7 +125,7 @@ window.ACERVO = {
           ],
           paragrafos: [
             "Não houve tempo para eliminatórias: as oito melhores seleções da Copa de 1995 foram convidadas. A final, entre Estados Unidos e China, reuniu 76.489 pessoas, então a maior plateia da história do esporte feminino. O recorde caiu três anos depois, no Rose Bowl.",
-            "O Brasil empatou com a Noruega por 2 a 2, venceu o Japão por 2 a 0, empatou com a Alemanha e chegou à semifinal. Chegou a vencer a China por 2 a 1, com gols de Roseli e Pretinha, mas Wei Haiying marcou aos 83 e aos 90 minutos e a China ganhou por 3 a 2. No jogo do bronze, a Noruega venceu por 2 a 0. Pretinha terminou como artilheira, com quatro gols. Formiga começava ali sua sequência de sete Olimpíadas."
+            "O Brasil empatou com a Noruega por 2 a 2, venceu o Japão por 2 a 0, empatou com a Alemanha e chegou à semifinal. Chegou a vencer a China por 2 a 1, com gols de Roseli e Pretinha, mas Wei Haiying marcou aos 83 e aos 90 minutos e a China ganhou por 3 a 2. No jogo do bronze, a Noruega venceu por 2 a 0. Pretinha dividiu a artilharia do torneio, com quatro gols. Formiga começava ali sua sequência de sete Olimpíadas."
           ]
         },
         {
@@ -103,7 +145,7 @@ window.ACERVO = {
             "A Noruega, campeã de 1995, caiu na semifinal por 5 a 0 para a China e terminou em quarto. A Alemanha perdeu para os Estados Unidos nas quartas, por 3 a 2.",
             "O Brasil fez a melhor campanha da sua história até então. Nas quartas, Sissi marcou de falta o gol de ouro que eliminou a Nigéria no prolongamento. Na semifinal, a seleção perdeu por 2 a 0 para os Estados Unidos e depois ficou com o terceiro lugar, vencendo a Noruega nos pênaltis: o primeiro pódio do Brasil em Copas. Sissi dividiu a artilharia com Sun Wen e levou a Bola de Prata. Formiga também estava lá."
           ],
-          notaCamisas: "A Noruega nº 5 é a única camisa do acervo com o torneio estampado na frente."
+          notaCamisas: "A Noruega nº 5, com o torneio bordado na frente, foi usada contra o Brasil no jogo do terceiro lugar. A de Grings é da competição. A de Cidinha foi preparada para a Copa, mas não entrou em campo: o torneio foi no verão dos Estados Unidos e o Brasil jogou só de manga curta."
         },
         {
           id: "olim-2000", tipo: "olimpiadas", ano: 2000, titulo: "Olimpíadas 2000",
@@ -120,7 +162,8 @@ window.ACERVO = {
           paragrafos: [
             "Os Estados Unidos, campeões do mundo, eram os favoritos e venceram a Noruega por 2 a 0 na estreia. A Noruega, que tinha tomado 5 a 0 da China na semifinal da Copa de 1999, reagiu: bateu a China e a Alemanha e chegou à final.",
             "Gro Espeseth abriu o placar. Tiffeny Milbrett empatou nos acréscimos do segundo tempo, mas, aos 12 minutos do prolongamento, Dagny Mellgren fez o gol de ouro que decidiu a medalha. As americanas reclamaram de um toque de mão na jogada; a árbitra considerou o lance legal.",
-            "O Brasil perdeu a semifinal para os Estados Unidos e o jogo do bronze para a Alemanha, por 2 a 0, e terminou em quarto lugar pela segunda Olimpíada seguida."
+            "O Brasil perdeu a semifinal para os Estados Unidos e o jogo do bronze para a Alemanha, por 2 a 0, e terminou em quarto lugar pela segunda Olimpíada seguida.",
+            "Pelo menos no Brasil, o modelo de camisa das Olimpíadas de 2000 é parecido com o da Copa de 1999. Por isso, uma camisa brasileira com nome desse período, como a de Cidinha, pode ser de uma competição ou da outra."
           ]
         },
         {
@@ -181,7 +224,7 @@ window.ACERVO = {
           paragrafos: [
             "Formiga nasceu em Salvador em 1978, quando ainda era proibido por lei que mulheres jogassem futebol no Brasil. A proibição acabou no ano seguinte.",
             "Estreou na seleção na Copa de 1995, aos 17 anos. É a única pessoa, homem ou mulher, a ter disputado sete Copas do Mundo e sete Olimpíadas de futebol. Foi prata em Atenas 2004 e Pequim 2008, vice-campeã mundial em 2007, e na Copa de 2019, aos 41 anos, tornou-se a jogadora mais velha da história do torneio.",
-            "Ela esteve nas Copas de 1995, 1999 e 2003 e nos Jogos de 1996, 2000 e 2004: as histórias da coleção 1991–2003 passam por ela. A camisa nº 8 do acervo, com o nome dela, é do modelo de 2019, ano da sua sétima Copa."
+            "Ela esteve nas Copas de 1995, 1999 e 2003 e nos Jogos de 1996, 2000 e 2004: as histórias da coleção Pioneiras passam por ela. A camisa nº 8 do acervo, com o nome dela, é do modelo de 2019, ano da sua sétima Copa."
           ]
         },
         {
@@ -207,18 +250,20 @@ window.ACERVO = {
 
   camisas: [
     {
-      id: "nor-1992-gk", colecao: "c1991", capitulo: "copa-1995",
+      id: "nor-1992-gk", colecao: "c1991", capitulo: "copa-1991",
       pais: "Noruega", sigla: "NOR",
       titulo: "Goleira, manga longa",
-      year: 1992, yearLabel: "c. 1992",
+      year: 1992, yearLabel: "c. 1990–94",
       fabricante: "Adidas",
       numero: "12", nome: "",
       tipo: "De jogo",
-      atribuicao: "Sem registro encontrado que confirme se foi usada pela seleção feminina ou pela masculina. A Noruega era potência no futebol feminino, o que torna a feminina a hipótese provável.",
+      atribuicao: "Sem registro que confirme se foi usada pela seleção feminina ou pela masculina. A Noruega era potência no futebol feminino, o que torna a feminina a hipótese provável.",
       tamanho: "", estado: "", procedencia: "", marcas: "",
       detalhes: "Cotoveleiras acolchoadas nas mangas. Emblema da federação norueguesa e trevo da Adidas no peito.",
-      texto: "A Noruega foi uma das potências da primeira geração do futebol feminino: campeã mundial em 1995 e campeã olímpica em 2000.",
+      texto: "Se for feminina, é da geração que foi vice-campeã mundial em 1991, campeã em 1995 e campeã olímpica em 2000.",
       competicoes: [],
+      uso: "epoca",
+      usoTexto: "Camisa de jogo sem nome, de algum ponto entre 1990 e 1994. Nas competições as camisas levavam o nome da jogadora, então esta foi usada provavelmente em eliminatórias, amistosos ou outros jogos da época.",
       img: { f: "img/nor-1992-gk-f.webp", b: "img/nor-1992-gk-b.webp" }
     },
     {
@@ -245,9 +290,9 @@ window.ACERVO = {
       numero: "5", nome: "Viker",
       tipo: "De jogo", atribuicao: "",
       tamanho: "", estado: "", procedencia: "", marcas: "",
-      detalhes: "Estampado na frente: “FIFA Women’s World Cup USA 1999”. Punhos com o nome do país.",
-      texto: "A Noruega chegou ao Mundial de 1999 como campeã de 1995 e foi até a semifinal. É a única camisa do acervo com o torneio escrito na frente.",
-      competicoes: [ { id: "copa-1999", status: "confirmado" } ],
+      detalhes: "Bordado na frente: “FIFA Women’s World Cup USA 1999”. Punhos com o nome do país.",
+      texto: "A Noruega chegou ao Mundial de 1999 como campeã de 1995 e terminou em quarto. Esta camisa foi usada contra o Brasil no jogo do terceiro lugar, e é a única do acervo com o torneio bordado na frente.",
+      competicoes: [ { id: "copa-1999", status: "confirmado", nota: "Torneio bordado na camisa. Usada contra o Brasil, no jogo do terceiro lugar." } ],
       img: { f: "img/nor-1999-f.webp", b: "img/nor-1999-b.webp" }
     },
     {
@@ -261,7 +306,9 @@ window.ACERVO = {
       tamanho: "", estado: "", procedencia: "", marcas: "",
       detalhes: "Três listras brancas nas laterais, painéis em tela vazada e etiqueta oficial da DFB na barra.",
       texto: "A Alemanha ainda não tinha vencido um Mundial em 1999. Viria a ser campeã em 2003 e 2007.",
-      competicoes: [ { id: "copa-1999", status: "provavel" } ],
+      competicoes: [],
+      uso: "epoca",
+      usoTexto: "Camisa de jogo sem nome, do modelo de 1998–99. Nas competições as camisas levavam o nome da jogadora, então esta foi usada provavelmente em eliminatórias ou em amistosos de preparação para a Copa de 1999.",
       img: { f: "img/ger-1999-away-f.webp", b: "img/ger-1999-away-b.webp" }
     },
     {
@@ -275,7 +322,9 @@ window.ACERVO = {
       tamanho: "", estado: "", procedencia: "", marcas: "",
       detalhes: "Gola polo preta, painéis laterais pretos e faixas nas cores da bandeira alemã nas mangas. Etiqueta oficial da DFB na barra.",
       texto: "",
-      competicoes: [ { id: "copa-1999", status: "provavel" }, { id: "olim-2000", status: "provavel" } ],
+      competicoes: [],
+      uso: "epoca",
+      usoTexto: "Camisa de jogo sem nome, do modelo de 1998–2000. Nas competições as camisas levavam o nome da jogadora, então esta foi usada provavelmente em eliminatórias ou em amistosos de preparação para a Copa de 1999 ou para as Olimpíadas de 2000.",
       img: { f: "img/ger-1999-16-f.webp", b: "img/ger-1999-16-b.webp" }
     },
     {
@@ -290,7 +339,7 @@ window.ACERVO = {
       marcas: "Autógrafos a caneta na frente da camisa.",
       detalhes: "Mesmo modelo da titular alemã de manga longa, aqui em manga curta.",
       texto: "",
-      competicoes: [ { id: "copa-1999", status: "provavel" }, { id: "olim-2000", status: "provavel" } ],
+      competicoes: [ { id: "copa-1999", status: "confirmado", nota: "Camisa da competição, segundo o acervo." } ],
       img: { f: "img/ger-1999-18-f.webp", b: "img/ger-1999-18-b.webp" }
     },
     {
@@ -304,7 +353,9 @@ window.ACERVO = {
       tamanho: "M (etiqueta)", estado: "", procedencia: "", marcas: "",
       detalhes: "Azul com ombros brancos e gola em V azul e branca. “BRASIL” escrito sob o escudo da CBF. Nas costas, número branco com contorno verde.",
       texto: "",
-      competicoes: [ { id: "copa-1999", status: "provavel" }, { id: "olim-2000", status: "provavel" } ],
+      competicoes: [],
+      uso: "epoca",
+      usoTexto: "Camisa de jogo sem nome, do modelo de 1998–2000. Nas competições as camisas levavam o nome da jogadora, então esta foi usada provavelmente em eliminatórias ou em amistosos de preparação para a Copa de 1999 ou para as Olimpíadas de 2000.",
       img: { f: "img/bra-1998-away-f.webp", b: "img/bra-1998-away-b.webp" }
     },
     {
@@ -314,11 +365,11 @@ window.ACERVO = {
       year: 2000, yearLabel: "c. 1999–2000",
       fabricante: "Nike",
       numero: "5", nome: "Cidinha",
-      tipo: "De jogo", atribuicao: "",
+      tipo: "Preparada para a Copa de 1999", atribuicao: "",
       tamanho: "", estado: "", procedencia: "", marcas: "",
       detalhes: "Laterais verdes em tela vazada e quatro estrelas sobre o escudo da CBF.",
-      texto: "Quatro estrelas no escudo: a camisa é anterior ao pentacampeonato mundial masculino de 2002, que acrescentou a quinta.",
-      competicoes: [ { id: "copa-1999", status: "provavel" }, { id: "olim-2000", status: "provavel" } ],
+      texto: "Preparada para a Copa de 1999, com nome e número, mas sem entrar em campo no torneio: foi no verão dos Estados Unidos e o Brasil jogou só de manga curta. Quatro estrelas no escudo: a camisa é anterior ao pentacampeonato mundial masculino de 2002, que acrescentou a quinta.",
+      competicoes: [ { id: "copa-1999", status: "preparada", nota: "Preparada para a Copa de 1999, mas não usada em jogo: o torneio foi no verão dos Estados Unidos e o Brasil jogou só de manga curta." }, { id: "olim-2000", status: "provavel" } ],
       img: { f: "img/bra-2000-f.webp", b: "img/bra-2000-b.webp" }
     },
     {
@@ -333,6 +384,8 @@ window.ACERVO = {
       detalhes: "Branca, com gola em V azul e vermelha, galo da FFF com uma estrela e listras azuis e vermelhas nas mangas.",
       texto: "A França estreou em Copas do Mundo femininas em 2003.",
       competicoes: [],
+      uso: "epoca",
+      usoTexto: "Camisa de jogo sem nome, de c. 2000–02. Nas competições as camisas levavam o nome da jogadora, então esta foi usada provavelmente em eliminatórias, amistosos ou outros jogos da época.",
       img: { f: "img/fra-2001-f.webp", b: "img/fra-2001-b.webp" }
     },
     {

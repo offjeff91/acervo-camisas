@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f3f5ef">
 <title>Acervo Guerreiras · A história do futebol feminino, vestida em campo</title>
-<meta name="description" content="Camisas de jogo de seleções femininas, de 1992 a 2024, em duas coleções: 1991–2003 e Legends.">
+<meta name="description" content="Camisas de jogo de seleções femininas, de 1992 a 2024, em duas coleções: Pioneiras e Legends.">
 <meta property="og:title" content="Acervo Guerreiras · A história do futebol feminino, vestida em campo">
-<meta property="og:description" content="Camisas de jogo de seleções femininas, de 1992 a 2024, em duas coleções: 1991–2003 e Legends.">
+<meta property="og:description" content="Camisas de jogo de seleções femininas, de 1992 a 2024, em duas coleções: Pioneiras e Legends.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%23b08d4a' stroke-width='6'/%3E%3Cpath d='M50 10v80' stroke='%23b08d4a' stroke-width='6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,34 +36,46 @@ body{margin:0;background:var(--porcelana);color:var(--tinta);font-family:var(--t
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.32;mix-blend-mode:multiply;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .38  0 0 0 0 .32  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 img{display:block;max-width:100%}
+h1,h2,h3,h4,.selo-num,.legenda .num,.legenda .pais,.trilho .ano,.cron-ano{font-optical-sizing:none;font-variation-settings:"opsz" 28}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--campo);outline-offset:3px}
 
-/* ---------- Abertura ---------- */
+/* ---------- Abertura (sem foto de destaque: tipografia e o círculo de meio-campo) ---------- */
 .hero{position:relative;overflow:hidden}
-.hero-in{position:relative;z-index:1;padding:clamp(28px,6vh,64px) var(--gutter) clamp(40px,7vh,88px);display:grid;gap:clamp(24px,4vw,72px);
-  grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;max-width:1500px;margin:0 auto}
-.campo{position:absolute;z-index:0;right:-6%;top:50%;transform:translateY(-50%);width:min(78vw,820px);height:auto;pointer-events:none}
-.campo *{fill:none;stroke:var(--ouro);stroke-width:1;opacity:.7}
-.campo .ponto{fill:var(--ouro);stroke:none}
+.hero-in{position:relative;z-index:1;padding:clamp(18px,4vh,40px) var(--gutter) clamp(40px,7vh,88px);display:grid;gap:clamp(24px,4vw,72px);
+  grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;max-width:1500px;margin:0 auto}
 .hero .marca{font-size:1rem;color:var(--tinta-2);margin:0 0 clamp(28px,9vh,104px);font-weight:500}
 .hero h1{font-family:var(--display);font-weight:500;line-height:1;letter-spacing:-.015em;margin:0;
-  font-size:clamp(2.5rem,6.6vw,6rem);text-wrap:balance}
+  font-size:clamp(2.5rem,6.8vw,6.4rem);text-wrap:balance}
 .hero .sub{font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:38ch;margin:clamp(20px,3vh,32px) 0 0;color:var(--tinta-2);font-weight:300}
 .hero .sub strong{color:var(--tinta);font-weight:600}
-.hero figure{margin:0}
-.mat{background:var(--papel);padding:clamp(8px,1.2vw,14px);border:1px solid var(--linha);transition:border-color .25s}
-.hero .capa{position:relative;display:block;width:100%;padding:0;border:0;background:none}
-.hero .capa .mat{border-color:var(--ouro)}
-.hero .quadro{position:relative;aspect-ratio:4/5;background:var(--foto);overflow:hidden}
-.hero .quadro img{width:100%;height:100%;object-fit:cover}
-.hero figcaption{margin-top:12px;font-size:.95rem;color:var(--tinta-2);display:flex;justify-content:space-between;gap:12px}
+.selo{position:relative;width:min(100%,430px);aspect-ratio:1;justify-self:center}
+.selo svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.selo svg *{fill:none;stroke:var(--ouro);stroke-width:1}
+.selo svg .ponto{fill:var(--ouro);stroke:none}
+.selo-txt{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:0 12%}
+.selo-num{font-family:var(--display);font-weight:500;font-size:clamp(4.6rem,10vw,7.6rem);line-height:.9;letter-spacing:-.03em}
+.selo-leg{font-size:1.05rem;color:var(--tinta-2);margin-top:6px}
+.selo-anos{font-family:var(--display);font-style:italic;color:var(--ouro-esc);font-size:clamp(1.25rem,2.2vw,1.75rem);margin-top:16px;padding-top:16px;border-top:1px solid var(--ouro)}
 @media (max-width:860px){
   .hero-in{grid-template-columns:1fr}
   .hero .marca{margin-bottom:28px}
-  .hero figure{max-width:440px}
-  .campo{right:-30%;top:72%}
+  .selo{width:min(78vw,320px);justify-self:start}
 }
+.mat{background:var(--papel);padding:clamp(8px,1.2vw,14px);border:1px solid var(--linha);transition:border-color .25s}
+
+/* ---------- Seletor de idioma ---------- */
+.idioma{display:inline-flex;border:1px solid var(--ouro)}
+.idioma button{background:transparent;border:0;border-right:1px solid var(--ouro);padding:6px 12px;font-family:var(--display);font-weight:600;font-size:.95rem;line-height:1.2;color:var(--tinta)}
+.idioma button:last-child{border-right:0}
+.idioma button[aria-pressed="true"]{background:var(--tinta);color:var(--porcelana)}
+.idioma button:hover:not([aria-pressed="true"]){background:var(--papel)}
+.barra{position:relative;z-index:3;max-width:1500px;margin:0 auto;padding:clamp(14px,2.5vh,24px) var(--gutter) 0;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.link-sobre{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--tinta);text-decoration:none;border-bottom:1px solid var(--ouro);padding:4px 0}
+.link-sobre:hover{border-bottom-width:2px}
+#vista-sobre .sobre{padding-top:clamp(36px,8vh,96px);min-height:58vh}
+.contato-rod{font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--tinta);text-decoration-color:var(--ouro);text-underline-offset:4px}
+.rodape-linha{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
 
 /* ---------- As duas coleções (portas) ---------- */
 .portas{max-width:1500px;margin:0 auto;padding:0 var(--gutter) clamp(36px,6vh,72px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
@@ -99,6 +111,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .chip{width:30px;height:30px;display:block;flex:none;overflow:visible}
 .chip .f{fill:#fff;stroke:var(--ouro-esc);stroke-width:1.6}
 .chip.prov .f{stroke-dasharray:3.2 2.6}
+.chip.prep .f{stroke-dasharray:.1 3.4;stroke-linecap:round;stroke-width:2.2}
 .chip.ok .f{fill:#e6d19f}
 .chip text{font-family:var(--display);font-weight:600;font-size:11px;fill:var(--tinta);text-anchor:middle}
 .chip.grande{width:46px;height:46px}
@@ -148,6 +161,15 @@ button{font:inherit;color:inherit;cursor:pointer}
 .foto .costas{opacity:0}
 @media (hover:hover){.placa>button:hover .costas,.placa>button:focus-visible .costas{opacity:1}}
 .chips{position:absolute;left:8px;top:8px;display:flex;gap:4px;z-index:2}
+.pilula{position:absolute;left:8px;top:8px;z-index:2;background:rgba(255,255,255,.95);border:1px solid var(--ouro-esc);color:var(--ouro-esc);font-size:.72rem;line-height:1.1;padding:4px 8px;font-weight:600}
+.pilula.in{position:static;display:inline-block}
+.epoca{margin-top:clamp(32px,5vh,52px);padding-top:22px;border-top:1px dashed var(--ouro)}
+.epoca h4{font-family:var(--display);font-weight:600;font-size:1.4rem;margin:0 0 6px}
+.epoca p{margin:0;max-width:70ch;color:var(--tinta-2);font-size:.98rem}
+.epoca .placas{margin-top:22px}
+.aviso{border-left:3px solid var(--ouro);background:var(--papel);padding:12px 16px}
+.aviso strong{font-family:var(--display);font-weight:600;display:block;font-size:1.1rem}
+.aviso p{margin:4px 0 0;font-size:.98rem}
 .legenda{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:baseline;padding:14px 4px 0}
 .legenda .num{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(2.6rem,5vw,3.6rem);line-height:.8;grid-row:span 2;min-width:1.1ch}
 .legenda .pais{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.1}
@@ -155,10 +177,11 @@ button{font:inherit;color:inherit;cursor:pointer}
 .placa.destaque .mat{border-color:var(--campo);box-shadow:0 0 0 2px var(--campo)}
 
 /* ---------- Sobre e rodapé ---------- */
-.sobre{max-width:1500px;margin:0 auto;padding:clamp(72px,12vh,150px) var(--gutter) clamp(48px,8vh,96px);
+.sobre{max-width:1500px;margin:0 auto;padding:clamp(28px,5vh,64px) var(--gutter) clamp(40px,7vh,88px);
   display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,4vw,64px)}
 .sobre h2{font-family:var(--display);font-weight:500;font-size:clamp(2.2rem,5.2vw,4.4rem);line-height:1;letter-spacing:-.01em;margin:0}
 .sobre p{margin:0 0 1em;max-width:58ch;font-size:1.05rem;font-weight:300}
+.sobre-sub{font-family:var(--display);font-weight:600;font-size:1.6rem;line-height:1.1;margin:2.2em 0 .7em;padding-top:1.2em;border-top:1px solid var(--ouro);max-width:58ch}
 .contato{display:inline-block;margin-top:8px;font-family:var(--display);font-weight:600;font-size:1.4rem;color:var(--tinta);
   text-decoration-color:var(--ouro);text-decoration-thickness:2px;text-underline-offset:6px}
 @media (max-width:760px){.sobre{grid-template-columns:1fr}}
@@ -206,50 +229,61 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
 </head>
 <body>
 
+<div class="barra"><a class="link-sobre" id="link-sobre" href="#sobre"></a><div class="idioma" id="idioma-topo"></div></div>
+
 <header class="hero" id="topo">
-  <svg class="campo" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
-    <circle cx="300" cy="300" r="250"/>
-    <line x1="300" y1="0" x2="300" y2="600"/>
-    <circle class="ponto" cx="300" cy="300" r="5"/>
-  </svg>
   <div class="hero-in">
     <div>
       <p class="marca" id="marca"></p>
       <h1 id="titulo"></h1>
       <p class="sub" id="sub"></p>
     </div>
-    <figure>
-      <button class="capa" id="capa" type="button" aria-label="Abrir a ficha da camisa em destaque">
-        <div class="mat"><div class="quadro"><img id="capa-img" alt=""><div class="chips" id="capa-chips"></div></div></div>
-      </button>
-      <figcaption id="capa-leg"></figcaption>
-    </figure>
+    <div class="selo" aria-hidden="true">
+      <svg viewBox="0 0 400 400" focusable="false">
+        <circle cx="200" cy="200" r="180"/>
+        <line x1="200" y1="-24" x2="200" y2="20"/>
+        <line x1="200" y1="380" x2="200" y2="424"/>
+        <circle class="ponto" cx="200" cy="20" r="4"/>
+        <circle class="ponto" cx="200" cy="380" r="4"/>
+      </svg>
+      <div class="selo-txt">
+        <div class="selo-num" id="selo-num"></div>
+        <div class="selo-leg" id="selo-leg"></div>
+        <div class="selo-anos" id="selo-anos"></div>
+      </div>
+    </div>
   </div>
 </header>
 
-<section class="portas" id="portas" aria-label="As duas coleções"></section>
 
-<nav class="trilho" aria-label="Linha do tempo: Copas, Olimpíadas e Legends">
+<div id="vista-home">
+<section class="portas" id="portas" aria-label=""></section>
+
+<nav class="trilho" id="trilho-nav" aria-label="">
   <div class="trilho-rolagem"><ol id="trilho"></ol></div>
 </nav>
 
 <div class="marcas-leg" id="legenda-marcas" role="note"></div>
 
 <main id="colecoes"></main>
+</div>
 
+<div id="vista-sobre" hidden>
 <section class="sobre" id="sobre" aria-labelledby="sobre-t">
-  <h2 id="sobre-t">Sobre o acervo</h2>
+  <h2 id="sobre-t"></h2>
   <div id="sobre-txt"></div>
 </section>
-<footer id="rodape"></footer>
+</div>
 
-<dialog id="ficha" aria-label="Ficha da camisa">
+<footer><div class="rodape-linha"><span id="rodape-txt"></span><span id="contato-rod"></span><div class="idioma" id="idioma-rodape"></div></div></footer>
+
+<dialog id="ficha" aria-label="">
   <div class="ficha">
     <div class="visor">
       <div class="tela" id="tela"><img id="visor-img" alt=""></div>
-      <div class="lados" role="group" aria-label="Lado da camisa">
-        <button type="button" id="lado-f" aria-pressed="true">Frente</button>
-        <button type="button" id="lado-b" aria-pressed="false">Costas</button>
+      <div class="lados" id="lados" role="group" aria-label="">
+        <button type="button" id="lado-f" aria-pressed="true"></button>
+        <button type="button" id="lado-b" aria-pressed="false"></button>
       </div>
     </div>
     <div class="dados" id="dados"></div>
@@ -257,33 +291,70 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
 </dialog>
 
 <script src="data.js"></script>
+<script src="i18n.js"></script>
 <script>
 (function(){
   "use strict";
-  var D = window.ACERVO;
+  var BASE = window.ACERVO, TR = window.ACERVO_I18N || {};
+  var LANGS = [
+    {id:"en", rot:"EN", nome:"English", html:"en"},
+    {id:"es", rot:"ES", nome:"Español", html:"es"},
+    {id:"br", rot:"BR", nome:"Português (Brasil)", html:"pt-BR"}
+  ];
   var $ = function(s){ return document.querySelector(s); };
   var el = function(tag, cls, txt){ var e=document.createElement(tag); if(cls) e.className=cls; if(txt!=null) e.textContent=txt; return e; };
+  var fmt = function(s, o){ return String(s).replace(/\{(\w+)\}/g, function(m,k){ return o[k]!=null ? o[k] : m; }); };
   var NS = "http://www.w3.org/2000/svg";
   var COR = { copa:"#1d4a3a", olimpiadas:"#a8812a", lenda:"#2e4a73" };
 
-  var porId = {}; D.camisas.forEach(function(c){ porId[c.id]=c; });
-  var capPorId = {};
-  D.colecoes.forEach(function(col){ col.capitulos.forEach(function(cp){ cp.col = col; capPorId[cp.id] = cp; }); });
-  var ordem = [];            /* camisas na ordem em que aparecem na página */
-  var anos = D.camisas.map(function(c){return c.year;});
-  var anoMin = Math.min.apply(null,anos), anoMax = Math.max.apply(null,anos);
-  var capa = porId["nor-1999"] || D.camisas[0];
-  var alt = function(c,lado){ return "Camisa "+c.titulo.toLowerCase()+" de "+c.pais+" ("+c.yearLabel+"), número "+c.numero+", "+(lado==="f"?"frente":"costas"); };
-  var rotulo = function(c){ return c.pais+" nº "+c.numero+(c.nome&&c.nome.indexOf(",")<0?" "+c.nome:""); };
+  var D, T, lang = "br", porId, capPorId, ordem, anoMin, anoMax, fichaId = null, fichaLado = "f";
 
-  /* marcador: círculo = Copa do Mundo, losango = Olimpíadas; contorno tracejado = uso provável */
+  /* ---------- idioma: dados traduzidos sobre a base em português ---------- */
+  function aplicar(base, tr){
+    var d = JSON.parse(JSON.stringify(base));
+    if (!tr) return d;
+    if (tr.titulo != null) d.titulo = tr.titulo;
+    if (tr.sobre) d.sobre = tr.sobre;
+    if (tr.sobreNos) d.sobreNos = tr.sobreNos;
+    if (tr.ui) Object.keys(tr.ui).forEach(function(k){ d.ui[k] = tr.ui[k]; });
+    if (tr.usos && tr.usos.epoca) Object.keys(tr.usos.epoca).forEach(function(k){ d.usos.epoca[k] = tr.usos.epoca[k]; });
+    if (tr.competicoes) Object.keys(tr.competicoes).forEach(function(id){ if (d.competicoes[id]) d.competicoes[id].nome = tr.competicoes[id]; });
+    d.colecoes.forEach(function(col){
+      var tc = tr.colecoes && tr.colecoes[col.id]; if (!tc) return;
+      ["titulo","resumo","texto"].forEach(function(k){ if (tc[k]!=null) col[k] = tc[k]; });
+      col.capitulos.forEach(function(cp){
+        var t = tc.capitulos && tc.capitulos[cp.id]; if (!t) return;
+        ["titulo","local","gancho","fatos","paragrafos","notaCamisas"].forEach(function(k){ if (t[k]!=null) cp[k] = t[k]; });
+      });
+    });
+    d.camisas.forEach(function(c){
+      var t = tr.camisas && tr.camisas[c.id]; if (!t) return;
+      ["pais","titulo","nome","tipo","atribuicao","tamanho","marcas","detalhes","texto","usoTexto"].forEach(function(k){ if (t[k]!=null) c[k] = t[k]; });
+      if (t.notas) (c.competicoes||[]).forEach(function(k){ if (t.notas[k.id]) k.nota = t.notas[k.id]; });
+    });
+    return d;
+  }
+  function detectar(){
+    var q = /[?&]lang=(en|es|br|pt)/i.exec(location.search);
+    if (q){ var v = q[1].toLowerCase(); return v==="pt" ? "br" : v; }
+    try { var s = localStorage.getItem("acervo-lang"); if (s==="en"||s==="es"||s==="br") return s; } catch(e){}
+    var n = String((navigator.languages && navigator.languages[0]) || navigator.language || "pt").toLowerCase();
+    if (n.indexOf("pt")===0) return "br";
+    if (n.indexOf("es")===0) return "es";
+    return "en";
+  }
+
+  var alt = function(c,lado){ return fmt(T.altFmt, {t:c.titulo.toLowerCase(), p:c.pais, y:c.yearLabel, n:c.numero, l:(lado==="f"?T.ladoF:T.ladoB)}); };
+  var rotulo = function(c){ return c.pais+" "+T.nr+" "+c.numero+(c.nome&&c.nome.indexOf(",")<0?" "+c.nome:""); };
+  var rotStatus = function(st){ return st==="confirmado" ? T.rotConf : (st==="preparada" ? T.rotPrep : T.rotProv); };
+
+  /* marcador: círculo = Copa do Mundo, losango = Olimpíadas */
   function chip(comp, status, cls){
     var s = document.createElementNS(NS,"svg");
     s.setAttribute("viewBox","0 0 32 32");
-    s.setAttribute("class","chip "+(status==="confirmado"?"ok":"prov")+(cls?" "+cls:""));
-    s.setAttribute("role","img");
-    var rot = comp.nome ? comp.nome+(status==="confirmado"?" (confirmado)":" (uso provável)") : "";
-    if (rot){ s.setAttribute("aria-label", rot); var t = document.createElementNS(NS,"title"); t.textContent = rot; s.appendChild(t); }
+    s.setAttribute("class","chip "+(status==="confirmado"?"ok":(status==="preparada"?"prep":"prov"))+(cls?" "+cls:""));
+    var rot = comp.nome ? comp.nome+rotStatus(status) : "";
+    if (rot){ s.setAttribute("role","img"); s.setAttribute("aria-label", rot); var t = document.createElementNS(NS,"title"); t.textContent = rot; s.appendChild(t); }
     else s.setAttribute("aria-hidden","true");
     var f;
     if (comp.tipo==="copa"){ f = document.createElementNS(NS,"circle"); f.setAttribute("cx","16"); f.setAttribute("cy","16"); f.setAttribute("r","14"); }
@@ -297,47 +368,162 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
     (c.competicoes||[]).forEach(function(k){ var comp = D.competicoes[k.id]; if (comp) box.appendChild(chip(comp,k.status)); });
     return box;
   }
+  function vazio(n){ while (n.firstChild) n.removeChild(n.firstChild); return n; }
 
-  /* ---------- abertura ---------- */
-  $("#marca").textContent = D.nome+(D.local?" · "+D.local:"");
-  $("#titulo").textContent = D.titulo;
-  $("#sub").innerHTML = "<strong>"+D.camisas.length+" camisas de jogo</strong> de seleções femininas, de "+anoMin+" a "+anoMax+", em "+D.colecoes.length+" coleções.";
-  $("#capa-img").src = capa.img.f; $("#capa-img").alt = alt(capa,"f");
-  (capa.competicoes||[]).forEach(function(k){ var comp = D.competicoes[k.id]; if (comp) $("#capa-chips").appendChild(chip(comp,k.status)); });
-  $("#capa-leg").appendChild(el("span",null,capa.pais+", "+capa.yearLabel));
-  $("#capa-leg").appendChild(el("span",null,"Ver ficha"));
-  $("#capa").addEventListener("click", function(){ abrir(capa.id); });
+  /* ---------- seletor de idioma ---------- */
+  var seletores = [];
+  function montarSeletor(box){
+    box.setAttribute("role","group");
+    LANGS.forEach(function(L){
+      var b = el("button",null,L.rot); b.type = "button"; b.setAttribute("lang", L.html); b.setAttribute("aria-label", L.nome); b.title = L.nome; b.dataset.l = L.id;
+      b.addEventListener("click", function(){ setLang(L.id, true); });
+      box.appendChild(b);
+    });
+    seletores.push(box);
+  }
+  function atualizarSeletores(){
+    seletores.forEach(function(box){
+      box.setAttribute("aria-label", T.selGrupo);
+      [].forEach.call(box.querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.dataset.l===lang ? "true" : "false"); });
+    });
+  }
 
-  /* portas */
-  var portas = $("#portas");
-  D.colecoes.forEach(function(col){
-    var lista = D.camisas.filter(function(c){ return c.colecao===col.id; });
-    var a = el("a","porta"); a.href = "#colecao-"+col.id;
-    var tx = el("div"); tx.appendChild(el("h2",null,col.titulo));
-    tx.appendChild(el("p",null,lista.length+" camisas · "+col.resumo));
-    var fotos = el("div","fotos"); fotos.setAttribute("aria-hidden","true");
-    lista.slice(0,3).forEach(function(c){ var im = el("img"); im.src = c.img.f; im.alt = ""; im.loading="lazy"; fotos.appendChild(im); });
-    a.appendChild(tx); a.appendChild(fotos); portas.appendChild(a);
-  });
+  /* ---------- construção da página no idioma atual ---------- */
+  function construir(){
+    porId = {}; D.camisas.forEach(function(c){ porId[c.id]=c; });
+    capPorId = {};
+    D.colecoes.forEach(function(col){ col.capitulos.forEach(function(cp){ cp.col = col; capPorId[cp.id] = cp; }); });
+    ordem = [];
+    var anos = D.camisas.map(function(c){return c.year;});
+    anoMin = Math.min.apply(null,anos); anoMax = Math.max.apply(null,anos);
 
-  /* legenda dos marcadores */
-  var leg = $("#legenda-marcas");
-  [["copa","confirmado","Copa do Mundo"],["olimpiadas","confirmado","Olimpíadas"],["copa","provavel","Contorno tracejado: uso provável, pelo modelo e pela época"]].forEach(function(x){
-    var i = el("span","it"); i.appendChild(chip({tipo:x[0]},x[1])); i.appendChild(document.createTextNode(x[2])); leg.appendChild(i);
-  });
+    var L = LANGS.filter(function(x){ return x.id===lang; })[0];
+    document.documentElement.lang = L.html;
+    document.title = T.docTitle;
+    [["meta[name=description]","content"],["meta[property='og:description']","content"]].forEach(function(p){ var m=$(p[0]); if(m) m.setAttribute(p[1], T.metaDesc); });
+    var og = $("meta[property='og:title']"); if (og) og.setAttribute("content", T.docTitle);
 
-  /* ---------- coleções e capítulos ---------- */
-  var main = $("#colecoes");
+    /* abertura */
+    $("#marca").textContent = D.nome+(D.local?" · "+D.local:"");
+    $("#titulo").textContent = D.titulo;
+    $("#sub").innerHTML = fmt(T.sub, {n:D.camisas.length, a:anoMin, b:anoMax, c:D.colecoes.length});
+    $("#selo-num").textContent = String(D.camisas.length);
+    $("#selo-leg").textContent = T.selo;
+    $("#selo-anos").textContent = anoMin+" \u2013 "+anoMax;
+    $("#portas").setAttribute("aria-label", T.colecoesAria);
+    $("#trilho-nav").setAttribute("aria-label", T.trilhoAria);
+    $("#sobre-t").textContent = T.sobreTit;
+    $("#ficha").setAttribute("aria-label", T.fichaAria);
+    $("#lado-f").textContent = T.frente; $("#lado-b").textContent = T.costas;
+    $("#lados").setAttribute("aria-label", T.ladoAria);
+
+    /* portas */
+    var portas = vazio($("#portas"));
+    D.colecoes.forEach(function(col){
+      var lista = D.camisas.filter(function(c){ return c.colecao===col.id; });
+      var a = el("a","porta"); a.href = "#colecao-"+col.id;
+      var tx = el("div"); tx.appendChild(el("h2",null,col.titulo));
+      tx.appendChild(el("p",null,fmt(T.camisasN,{n:lista.length})+" · "+col.resumo));
+      var fotos = el("div","fotos"); fotos.setAttribute("aria-hidden","true");
+      lista.slice(0,3).forEach(function(c){ var im = el("img"); im.src = c.img.f; im.alt = ""; im.loading="lazy"; fotos.appendChild(im); });
+      a.appendChild(tx); a.appendChild(fotos); portas.appendChild(a);
+    });
+
+    /* legenda dos marcadores */
+    var leg = vazio($("#legenda-marcas"));
+    [["copa","confirmado",T.legCopa],["olimpiadas","confirmado",T.legOlim],["copa","provavel",T.legProv],["copa","preparada",T.legPrep]].forEach(function(x){
+      var i = el("span","it"); i.appendChild(chip({tipo:x[0]},x[1])); i.appendChild(document.createTextNode(x[2])); leg.appendChild(i);
+    });
+    var ie = el("span","it"); ie.appendChild(el("span","pilula in",D.usos.epoca.rotulo)); ie.appendChild(document.createTextNode(T.legSemNome)); leg.appendChild(ie);
+
+    /* coleções e capítulos */
+    var main = vazio($("#colecoes"));
+    D.colecoes.forEach(function(col){
+      var sec = el("section","colecao"); sec.id = "colecao-"+col.id; sec.setAttribute("aria-labelledby","h-"+col.id);
+      var cab = el("div","col-cab");
+      var esq = el("div"); var h = el("h2",null,col.titulo); h.id = "h-"+col.id; esq.appendChild(h);
+      esq.appendChild(el("p","resumo",col.resumo));
+      cab.appendChild(esq); cab.appendChild(el("p","intro",col.texto)); sec.appendChild(cab);
+      col.capitulos.forEach(function(cp){
+        var cap = el("article","cap"); cap.id = "cap-"+cp.id; cap.style.setProperty("--cor", COR[cp.tipo]);
+        var ch = el("div","cap-cab"), tit = el("div","cap-tit");
+        if (cp.tipo==="lenda"){ var st = el("span","estrela-g","\u2605"); st.setAttribute("aria-hidden","true"); tit.appendChild(st); }
+        else tit.appendChild(chip({tipo:cp.tipo, ano:cp.ano}, "confirmado", "grande"));
+        var tt = el("div"); tt.appendChild(el("h3",null,cp.titulo)); tt.appendChild(el("p","local",cp.local));
+        tit.appendChild(tt); ch.appendChild(tit); ch.appendChild(el("p","gancho",cp.gancho)); cap.appendChild(ch);
+        var corpo = el("div","cap-corpo"), dl = el("dl","fatos");
+        cp.fatos.forEach(function(f){ var d = el("div"); d.appendChild(el("dt",null,f[0])); d.appendChild(el("dd",null,f[1])); dl.appendChild(d); });
+        var his = el("div","historia-cap"); cp.paragrafos.forEach(function(p){ his.appendChild(el("p",null,p)); });
+        corpo.appendChild(dl); corpo.appendChild(his); cap.appendChild(corpo);
+        var todas = D.camisas.filter(function(c){ return c.capitulo===cp.id; }).sort(function(a,b){ return a.year-b.year; });
+        var daComp = todas.filter(function(c){ return c.uso!=="epoca"; });
+        var daEpoca = todas.filter(function(c){ return c.uso==="epoca"; });
+        if (daComp.length){
+          var ul = el("ul","placas"); daComp.forEach(function(c){ ul.appendChild(placa(c)); ordem.push(c); }); cap.appendChild(ul);
+        }
+        if (cp.notaCamisas) cap.appendChild(el("p","nota-camisas",cp.notaCamisas));
+        if (daEpoca.length){
+          var ep = el("div","epoca"); ep.appendChild(el("h4",null,T.epocaTit)); ep.appendChild(el("p",null,D.usos.epoca.texto));
+          var ul2 = el("ul","placas"); daEpoca.forEach(function(c){ ul2.appendChild(placa(c)); ordem.push(c); }); ep.appendChild(ul2); cap.appendChild(ep);
+        }
+        if (cp.competicao){
+          var outras = D.camisas.filter(function(c){ return c.capitulo!==cp.id && (c.competicoes||[]).some(function(k){ return k.id===cp.competicao; }); });
+          if (outras.length){
+            var tb = el("div","tambem"); tb.appendChild(el("span",null,T.tambem));
+            outras.forEach(function(c){ var bt2 = el("button",null,rotulo(c)); bt2.type="button"; bt2.addEventListener("click", function(){ abrir(c.id); }); tb.appendChild(bt2); });
+            cap.appendChild(tb);
+          }
+        }
+        sec.appendChild(cap);
+      });
+      main.appendChild(sec);
+    });
+    D.camisas.forEach(function(c){ if (ordem.indexOf(c)<0) ordem.push(c); });
+
+    /* trilho */
+    var trilho = vazio($("#trilho"));
+    D.colecoes.forEach(function(col, ci){
+      col.capitulos.forEach(function(cp, i){
+        var li = el("li"); if (ci>0 && i===0) li.className = "sep";
+        var a = el("a"); a.href = "#cap-"+cp.id; a.dataset.id = cp.id; a.style.setProperty("--cor", COR[cp.tipo]);
+        var b1 = el("span","barra"); b1.setAttribute("aria-hidden","true"); a.appendChild(b1);
+        var l1 = el("span","linha1");
+        if (cp.tipo==="lenda"){ l1.appendChild(el("span","estrela","\u2605")); l1.lastChild.setAttribute("aria-hidden","true"); }
+        else l1.appendChild(chip({tipo:cp.tipo}, "confirmado", "mini"));
+        l1.appendChild(el("span","ano", String(cp.ano))); a.appendChild(l1);
+        a.appendChild(el("span","nome", cp.tipo==="copa"?T.copaRot:(cp.tipo==="olimpiadas"?T.olimpRot:cp.titulo)));
+        a.setAttribute("aria-label", cp.titulo);
+        li.appendChild(a); trilho.appendChild(li);
+      });
+    });
+    marcar();
+
+    /* sobre e rodapé */
+    var st = vazio($("#sobre-txt"));
+    (D.sobreNos||[]).forEach(function(t){ st.appendChild(el("p",null,t)); });
+    if (D.sobre && D.sobre.length){ st.appendChild(el("h3","sobre-sub",T.acervoTit)); D.sobre.forEach(function(t){ st.appendChild(el("p",null,t)); }); }
+    var cr = vazio($("#contato-rod"));
+    if (D.contato && D.contato.usuario){
+      var href = "mailto:"+D.contato.usuario+"@"+D.contato.dominio+(D.contato.assunto?"?subject="+encodeURIComponent(D.contato.assunto):"");
+      var a2 = el("a","contato",T.contato); a2.href = href; st.appendChild(a2);
+      var a3 = el("a","contato-rod",T.contato); a3.href = href; cr.appendChild(a3);
+    }
+    $("#rodape-txt").textContent = fmt(T.rodape, {nome:D.nome, local:(D.local?" · "+D.local:""), n:D.camisas.length, a:anoMin, b:anoMax});
+    atualizarSeletores();
+    rota();
+  }
+
   function placa(c){
     var li = el("li","placa"); li.id = c.id;
     var b = el("button"); b.type="button";
-    var comps = (c.competicoes||[]).map(function(k){ var cp=D.competicoes[k.id]; return cp ? cp.nome+(k.status==="confirmado"?" (confirmado)":" (uso provável)") : ""; }).filter(Boolean);
-    b.setAttribute("aria-label","Abrir ficha: "+c.pais+", "+c.titulo+", "+c.yearLabel+(comps.length?". "+comps.join(", "):""));
+    var comps = (c.competicoes||[]).map(function(k){ var cp=D.competicoes[k.id]; return cp ? cp.nome+rotStatus(k.status) : ""; }).filter(Boolean);
+    b.setAttribute("aria-label", T.abrirFicha+c.pais+", "+c.titulo+", "+c.yearLabel+(comps.length?". "+comps.join(", "):"")+(c.uso==="epoca"?". "+T.foraCompAria:""));
     var mat = el("div","mat"), f = el("div","foto");
     var i1 = el("img"); i1.src=c.img.f; i1.alt=alt(c,"f"); i1.loading="lazy"; i1.decoding="async";
     var i2 = el("img","costas"); i2.src=c.img.b; i2.alt=""; i2.loading="lazy"; i2.decoding="async";
     f.appendChild(i1); f.appendChild(i2);
     if ((c.competicoes||[]).length) f.appendChild(chipsDe(c));
+    if (c.uso==="epoca") f.appendChild(el("span","pilula",D.usos.epoca.rotulo));
     mat.appendChild(f);
     var lg = el("div","legenda");
     lg.appendChild(el("span","num",c.numero));
@@ -348,88 +534,18 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
     return li;
   }
 
-  D.colecoes.forEach(function(col){
-    var sec = el("section","colecao"); sec.id = "colecao-"+col.id; sec.setAttribute("aria-labelledby","h-"+col.id);
-    var cab = el("div","col-cab");
-    var esq = el("div"); var h = el("h2",null,col.titulo); h.id = "h-"+col.id; esq.appendChild(h);
-    esq.appendChild(el("p","resumo",col.resumo));
-    cab.appendChild(esq); cab.appendChild(el("p","intro",col.texto)); sec.appendChild(cab);
-
-    col.capitulos.forEach(function(cp){
-      var cap = el("article","cap"); cap.id = "cap-"+cp.id; cap.style.setProperty("--cor", COR[cp.tipo]);
-      var ch = el("div","cap-cab");
-      var tit = el("div","cap-tit");
-      if (cp.tipo==="lenda"){ var st = el("span","estrela-g","\u2605"); st.setAttribute("aria-hidden","true"); tit.appendChild(st); }
-      else tit.appendChild(chip({tipo:cp.tipo, ano:cp.ano}, "confirmado", "grande"));
-      var tt = el("div"); tt.appendChild(el("h3",null,cp.titulo)); tt.appendChild(el("p","local",cp.local));
-      tit.appendChild(tt); ch.appendChild(tit); ch.appendChild(el("p","gancho",cp.gancho)); cap.appendChild(ch);
-
-      var corpo = el("div","cap-corpo");
-      var dl = el("dl","fatos");
-      cp.fatos.forEach(function(f){ var d = el("div"); d.appendChild(el("dt",null,f[0])); d.appendChild(el("dd",null,f[1])); dl.appendChild(d); });
-      var his = el("div","historia-cap");
-      cp.paragrafos.forEach(function(p){ his.appendChild(el("p",null,p)); });
-      corpo.appendChild(dl); corpo.appendChild(his); cap.appendChild(corpo);
-
-      var lista = D.camisas.filter(function(c){ return c.capitulo===cp.id; }).sort(function(a,b){ return a.year-b.year; });
-      if (lista.length){
-        var ul = el("ul","placas");
-        lista.forEach(function(c){ ul.appendChild(placa(c)); ordem.push(c); });
-        cap.appendChild(ul);
-        if (cp.notaCamisas) cap.appendChild(el("p","nota-camisas",cp.notaCamisas));
-      }
-      if (cp.competicao){
-        var outras = D.camisas.filter(function(c){ return c.capitulo!==cp.id && (c.competicoes||[]).some(function(k){ return k.id===cp.competicao; }); });
-        if (outras.length){
-          var tb = el("div","tambem"); tb.appendChild(el("span",null,"Camisas do acervo que podem ter estado em campo aqui:"));
-          outras.forEach(function(c){ var bt = el("button",null,rotulo(c)); bt.type="button"; bt.addEventListener("click", function(){ abrir(c.id); }); tb.appendChild(bt); });
-          cap.appendChild(tb);
-        }
-      }
-      sec.appendChild(cap);
-    });
-    main.appendChild(sec);
-  });
-  /* camisas de ficha aberta pela seção "também" precisam estar em "ordem" */
-  D.camisas.forEach(function(c){ if (ordem.indexOf(c)<0) ordem.push(c); });
-
-  /* ---------- trilho ---------- */
-  var trilho = $("#trilho"), primeiraLenda = true;
-  D.colecoes.forEach(function(col, ci){
-    col.capitulos.forEach(function(cp, i){
-      var li = el("li"); if (ci>0 && i===0) li.className = "sep";
-      var a = el("a"); a.href = "#cap-"+cp.id; a.dataset.id = cp.id; a.style.setProperty("--cor", COR[cp.tipo]);
-      var b1 = el("span","barra"); b1.setAttribute("aria-hidden","true"); a.appendChild(b1);
-      var l1 = el("span","linha1");
-      if (cp.tipo==="lenda"){ l1.appendChild(el("span","estrela","\u2605")); l1.lastChild.setAttribute("aria-hidden","true"); }
-      else l1.appendChild(chip({tipo:cp.tipo}, "confirmado", "mini"));
-      l1.appendChild(el("span","ano", String(cp.ano))); a.appendChild(l1);
-      a.appendChild(el("span","nome", cp.tipo==="copa"?"Copa":(cp.tipo==="olimpiadas"?"Olimpíadas":cp.titulo)));
-      a.setAttribute("aria-label", cp.titulo);
-      li.appendChild(a); trilho.appendChild(li);
-    });
-  });
-  var links = [].slice.call(document.querySelectorAll(".trilho a"));
+  /* trilho: destaca o capítulo visível */
   var raf = null;
   function marcar(){
     raf = null; var atual = null;
-    for (var i=0;i<links.length;i++){
-      var alvo = document.getElementById("cap-"+links[i].dataset.id);
-      if (alvo && alvo.getBoundingClientRect().top <= 150) atual = links[i];
-    }
+    var links = [].slice.call(document.querySelectorAll(".trilho a"));
+    links.forEach(function(a){ var alvo = document.getElementById("cap-"+a.dataset.id); if (alvo && alvo.getBoundingClientRect().top <= 150) atual = a; });
     links.forEach(function(a){ if (a===atual){ a.setAttribute("aria-current","true");
       var r = a.closest(".trilho-rolagem"), ar = a.getBoundingClientRect(), rr = r.getBoundingClientRect();
       if (ar.left < rr.left || ar.right > rr.right) r.scrollLeft += (ar.left-rr.left)-(rr.width-ar.width)/2;
     } else a.removeAttribute("aria-current"); });
   }
   window.addEventListener("scroll", function(){ if(!raf) raf = requestAnimationFrame(marcar); }, {passive:true});
-  marcar();
-
-  /* ---------- sobre e rodapé ---------- */
-  var st = $("#sobre-txt");
-  D.sobre.forEach(function(t){ st.appendChild(el("p",null,t)); });
-  if (D.contato && D.contato.usuario){ var a = el("a","contato","Conversar sobre o acervo"); a.href = "mailto:"+D.contato.usuario+"@"+D.contato.dominio+(D.contato.assunto?"?subject="+encodeURIComponent(D.contato.assunto):""); st.appendChild(a); }
-  $("#rodape").textContent = D.nome+(D.local?" · "+D.local:"")+" · "+D.camisas.length+" camisas, "+anoMin+"–"+anoMax+". Escudos e marcas pertencem aos seus titulares e aparecem aqui apenas nas fotos das camisas.";
 
   /* ---------- ficha ---------- */
   var dlg = $("#ficha"), tela = $("#tela"), vimg = $("#visor-img"), dados = $("#dados");
@@ -437,40 +553,46 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
   var idx = function(id){ for (var i=0;i<ordem.length;i++) if (ordem[i].id===id) return i; return 0; };
   function linha(dl, k, v){ if(!v) return; dl.appendChild(el("dt",null,k)); dl.appendChild(el("dd",null,v)); }
   function mostrarLado(l){
+    fichaLado = l;
     var c = ordem[atual]; vimg.src = c.img[l]; vimg.alt = alt(c,l);
     tela.classList.remove("zoom");
     $("#lado-f").setAttribute("aria-pressed", l==="f"); $("#lado-b").setAttribute("aria-pressed", l==="b");
   }
   function montar(){
     var c = ordem[atual], cp = capPorId[c.capitulo];
-    dados.innerHTML = "";
+    fichaId = c.id;
+    vazio(dados);
     var topo = el("div","topo");
     topo.appendChild(el("p","era-tag", cp ? cp.titulo+" · "+cp.col.titulo : ""));
-    var x = el("button","fechar","×"); x.type="button"; x.setAttribute("aria-label","Fechar ficha"); x.addEventListener("click", function(){ dlg.close(); });
+    var x = el("button","fechar","×"); x.type="button"; x.setAttribute("aria-label",T.fechar); x.addEventListener("click", function(){ dlg.close(); });
     topo.appendChild(x); dados.appendChild(topo);
     dados.appendChild(el("h3",null,c.pais+" "+c.yearLabel));
     dados.appendChild(el("p","sub",c.titulo));
     var dl = el("dl");
-    linha(dl,"Seleção",c.pais); linha(dl,"Época",c.yearLabel); linha(dl,"Fabricante",c.fabricante); linha(dl,"Número",c.numero);
-    linha(dl,"Nome na camisa",c.nome); linha(dl,"Tipo",c.tipo); linha(dl,"Atribuição",c.atribuicao); linha(dl,"Tamanho",c.tamanho);
-    linha(dl,"Estado",c.estado); linha(dl,"Procedência",c.procedencia); linha(dl,"Marcas",c.marcas); linha(dl,"Detalhes",c.detalhes);
+    linha(dl,T.rSelecao,c.pais); linha(dl,T.rEpoca,c.yearLabel); linha(dl,T.rFab,c.fabricante); linha(dl,T.rNum,c.numero);
+    linha(dl,T.rNome,c.nome); linha(dl,T.rTipo,c.tipo); linha(dl,T.rAtrib,c.atribuicao); linha(dl,T.rTam,c.tamanho);
+    linha(dl,T.rEstado,c.estado); linha(dl,T.rProc,c.procedencia); linha(dl,T.rMarcas,c.marcas); linha(dl,T.rDet,c.detalhes);
     dados.appendChild(dl);
+    if (c.uso==="epoca"){
+      var av = el("div","aviso"); av.appendChild(el("strong",null,T.foraComp));
+      av.appendChild(el("p",null,c.usoTexto||D.usos.epoca.texto)); dados.appendChild(av);
+    }
     var cs = (c.competicoes||[]).filter(function(k){ return D.competicoes[k.id]; });
     if (cs.length){
-      var bx = el("div","comps"); bx.appendChild(el("p","t","Competições"));
+      var bx = el("div","comps"); bx.appendChild(el("p","t",T.competicoes));
       var ul = el("ul");
       cs.forEach(function(k){
         var comp = D.competicoes[k.id], li = el("li");
         li.appendChild(chip({tipo:comp.tipo, ano:comp.ano}, k.status));
         var tx = el("span"); tx.appendChild(el("strong",null,comp.nome));
-        tx.appendChild(el("small",null, k.status==="confirmado" ? "Confirmado: o torneio está estampado na camisa." : "Uso provável, pelo modelo e pela época."));
+        tx.appendChild(el("small",null, k.nota || (k.status==="confirmado" ? T.stConf : (k.status==="preparada" ? T.stPrep : T.stProv))));
         li.appendChild(tx); ul.appendChild(li);
       });
       bx.appendChild(ul); dados.appendChild(bx);
     }
     if (c.texto) dados.appendChild(el("p","historia",c.texto));
     var nav = el("div","nav");
-    var ant = el("button",null,"Anterior"), prox = el("button",null,"Próxima");
+    var ant = el("button",null,T.anterior), prox = el("button",null,T.proxima);
     ant.type = prox.type = "button";
     ant.disabled = atual===0; prox.disabled = atual===ordem.length-1;
     ant.style.opacity = ant.disabled?.4:1; prox.style.opacity = prox.disabled?.4:1;
@@ -484,7 +606,7 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
     if (typeof dlg.showModal==="function") dlg.showModal(); else dlg.setAttribute("open","");
     document.body.style.overflow = "hidden";
   }
-  dlg.addEventListener("close", function(){ document.body.style.overflow=""; if(ultimoFoco&&ultimoFoco.focus) ultimoFoco.focus(); });
+  dlg.addEventListener("close", function(){ document.body.style.overflow=""; fichaId = null; if(ultimoFoco&&ultimoFoco.focus) ultimoFoco.focus(); });
   dlg.addEventListener("click", function(ev){ if (ev.target===dlg) dlg.close(); });
   dlg.addEventListener("keydown", function(ev){ if (ev.key==="ArrowRight") ir(1); else if (ev.key==="ArrowLeft") ir(-1); });
   $("#lado-f").addEventListener("click", function(){ mostrarLado("f"); });
@@ -496,6 +618,35 @@ dialog::backdrop{background:rgba(16,38,31,.5)}
   }
   tela.addEventListener("click", function(ev){ origem(ev); tela.classList.toggle("zoom"); });
   tela.addEventListener("pointermove", function(ev){ if (tela.classList.contains("zoom") && (ev.pointerType==="mouse" || ev.buttons)) origem(ev); });
+
+  /* ---------- vistas: Home e Sobre ---------- */
+  function rota(){
+    var s = location.hash === "#sobre";
+    $("#vista-home").hidden = s; $("#vista-sobre").hidden = !s; $("#topo").hidden = s;
+    var ls = $("#link-sobre"); ls.textContent = s ? T.voltar : T.sobreLink; ls.setAttribute("href", s ? "#topo" : "#sobre");
+    document.title = s ? T.sobreTit+" · "+D.nome : T.docTitle;
+  }
+  window.addEventListener("hashchange", function(){
+    rota(); var h = location.hash;
+    if (h==="#sobre" || h==="#topo" || h==="") window.scrollTo(0,0);
+  });
+
+  /* ---------- troca de idioma ---------- */
+  function setLang(id, salvar){
+    if (id!=="en" && id!=="es") id = "br";
+    lang = id;
+    D = aplicar(BASE, id==="br" ? null : TR[id]);
+    T = D.ui;
+    construir();
+    if (fichaId && dlg.open){ var lado = fichaLado; atual = idx(fichaId); montar(); mostrarLado(lado); }
+    if (salvar){
+      try { localStorage.setItem("acervo-lang", id); } catch(e){}
+      try { var u = new URL(location.href); u.searchParams.set("lang", id); history.replaceState(null, "", u.toString()); } catch(e){}
+    }
+  }
+
+  montarSeletor($("#idioma-topo")); montarSeletor($("#idioma-rodape"));
+  setLang(detectar(), false);
 })();
 </script>
 </body>
